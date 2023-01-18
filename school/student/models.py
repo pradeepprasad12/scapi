@@ -13,7 +13,7 @@ class Class(models.Model):
 class Student(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
-    class_name = models.ForeignKey(Class,on_delete=models.CASCADE,related_name='classes',null=True,blank=True)
+    class_id = models.ForeignKey(Class,on_delete=models.CASCADE,related_name='stu',null=True,blank=True)
 
     def __str__(self):
         return self.name
